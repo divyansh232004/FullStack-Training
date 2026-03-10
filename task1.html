@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click</title>
+</head>
+<body>
+    <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur libero aut quae dolorem autem nihil rerum? A dolor iusto aut ab, magni quos, cumque inventore quam voluptatum, placeat labore enim?</p>
+    <button id="Button">Click Me!</button>
+
+    
+
+</body>
+<script>
+        const paga = document.getElementById('p')
+        const button = document.getElementById('Button');
+        button.addEventListener("click", function() {
+            paga.textContent = "the paragraph text has been changed";
+            button.style.color= "red";
+        })
+        console.log(button);
+    </script>
+</html>

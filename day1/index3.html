@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divyansh Srivastava | Full Stack Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            glass: 'rgba(255,255,255,0.08)'
+          },
+          backdropBlur: {
+            xs: '2px'
+          },
+          keyframes: {
+            float: {
+              '0%,100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-20px)' }
+            },
+            glow: {
+              '0%,100%': { opacity: 0.5 },
+              '50%': { opacity: 1 }
+            }
+          },
+          animation: {
+            float: 'float 6s ease-in-out infinite',
+            glow: 'glow 4s ease-in-out infinite'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: radial-gradient(circle at 20% 20%, #111827, #020617); }
+    .glass { backdrop-filter: blur(14px); background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); }
+    .section { padding: 100px 20px; }
+    .orb { position: fixed; border-radius: 9999px; filter: blur(120px); opacity: .35; z-index: -1; }
+    .orb1 { width: 400px; height: 400px; background: #6366f1; top: -100px; left: -100px; animation: float 10s ease-in-out infinite; }
+    .orb2 { width: 400px; height: 400px; background: #22c55e; bottom: -120px; right: -120px; animation: float 12s ease-in-out infinite; }
+  </style>
+</head>
+<body class="text-gray-200 font-sans">
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<!-- Navbar -->
+<header class="fixed w-full top-0 z-50">
+  <nav class="max-w-6xl mx-auto mt-4 px-6 py-3 glass rounded-2xl flex justify-between items-center">
+    <h1 class="font-bold text-lg">Divyansh.dev</h1>
+    <div class="space-x-6 hidden md:block">
+      <a href="#about" class="hover:text-indigo-400 transition">About</a>
+      <a href="#projects" class="hover:text-indigo-400 transition">Projects</a>
+      <a href="#skills" class="hover:text-indigo-400 transition">Skills</a>
+      <a href="#experience" class="hover:text-indigo-400 transition">Experience</a>
+      <a href="#contact" class="hover:text-indigo-400 transition">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="section flex items-center justify-center min-h-screen text-center">
+  <div class="max-w-3xl">
+    <h2 class="text-5xl font-bold mb-6">Hi, I'm <span class="text-indigo-400">Divyansh Srivastava</span></h2>
+    <h3 id="typing" class="text-2xl text-gray-300 h-10"></h3>
+    <p class="mt-6 text-gray-400">Full Stack Developer specializing in React, Node.js, and scalable web applications.</p>
+    <div class="mt-8 space-x-4">
+      <a href="#projects" class="px-6 py-3 bg-indigo-600 rounded-xl hover:bg-indigo-500 transition">View Projects</a>
+      <a href="#contact" class="px-6 py-3 border border-indigo-500 rounded-xl hover:bg-indigo-600/20 transition">Hire Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <div class="max-w-5xl mx-auto glass p-10 rounded-3xl">
+    <h2 class="text-3xl font-bold mb-6">About Me</h2>
+    <p class="text-gray-300 leading-relaxed">
+      I am a Computer Science Engineering student and Full Stack Developer passionate about building modern, responsive, and high-performance web applications. I focus on clean UI design, scalable backend architecture, and user-centered experiences.
+    </p>
+  </div>
+</section>
+
+<!-- Projects -->
+<section id="projects" class="section">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass p-6 rounded-2xl hover:scale-105 transition">
+        <h3 class="text-xl font-semibold">Spotify Clone UI</h3>
+        <p class="text-gray-400 mt-3">Responsive Spotify web player clone with interactive UI and DOM manipulation.</p>
+      </div>
+      <div class="glass p-6 rounded-2xl hover:scale-105 transition">
+        <h3 class="text-xl font-semibold">Zerodha Clone</h3>
+        <p class="text-gray-400 mt-3">Stock trading platform simulation with authentication and dashboard features.</p>
+      </div>
+      <div class="glass p-6 rounded-2xl hover:scale-105 transition">
+        <h3 class="text-xl font-semibold">Sustainable Development App</h3>
+        <p class="text-gray-400 mt-3">Data-driven React application displaying global development statistics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="section">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-12 text-center">Skills</h2>
+    <div class="space-y-6">
+      <div class="skill"><p>HTML / CSS</p><div class="w-full bg-gray-700 rounded"><div class="bar bg-indigo-500 h-3 rounded" data-width="90%"></div></div></div>
+      <div class="skill"><p>JavaScript</p><div class="w-full bg-gray-700 rounded"><div class="bar bg-green-500 h-3 rounded" data-width="85%"></div></div></div>
+      <div class="skill"><p>React</p><div class="w-full bg-gray-700 rounded"><div class="bar bg-blue-500 h-3 rounded" data-width="80%"></div></div></div>
+      <div class="skill"><p>Node.js</p><div class="w-full bg-gray-700 rounded"><div class="bar bg-yellow-500 h-3 rounded" data-width="70%"></div></div></div>
+      <div class="skill"><p>SQL</p><div class="w-full bg-gray-700 rounded"><div class="bar bg-pink-500 h-3 rounded" data-width="65%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience -->
+<section id="experience" class="section">
+  <div class="max-w-5xl mx-auto glass p-10 rounded-3xl">
+    <h2 class="text-3xl font-bold mb-6">Experience</h2>
+    <p class="text-gray-400">Fresher — Hands-on experience through multiple full-stack and frontend projects focusing on scalable architecture and responsive UI.</p>
+  </div>
+</section>
+
+<!-- Certificates -->
+<section id="certificates" class="section">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10 text-center">Certificates</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="glass p-6 rounded-2xl">Frontend Bootcamp — Sheryians Coding School (2025)</div>
+      <div class="glass p-6 rounded-2xl">SIGMA 4.0 — Apna College (2023)</div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="section">
+  <div class="max-w-5xl mx-auto glass p-10 rounded-3xl">
+    <h2 class="text-3xl font-bold mb-6">Education</h2>
+    <ul class="space-y-4 text-gray-300">
+      <li>B.Tech Computer Science & Engineering — KCCITM (2023–2027)</li>
+      <li>Class XII (CBSE) — 2023</li>
+      <li>Class X (CBSE) — 2021</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section">
+  <div class="max-w-4xl mx-auto glass p-10 rounded-3xl text-center">
+    <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+    <p>Email: divyanshsrivastava1052@gmail.com</p>
+    <p>Phone: +91 9305556826</p>
+    <div class="mt-6 space-x-4">
+      <a href="https://github.com/divyansh232004" target="_blank" class="px-5 py-2 border rounded-lg hover:bg-indigo-600/20">GitHub</a>
+      <a href="https://www.linkedin.com/in/divyansh-srivastava-9a137529b" target="_blank" class="px-5 py-2 border rounded-lg hover:bg-indigo-600/20">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer class="text-center py-8 text-gray-500">© 2026 Divyansh Srivastava. All rights reserved.</footer>
+
+<script>
+// typing animation
+const roles = ["Full Stack Developer", "React Developer", "Frontend Specialist"];
+let i=0,j=0,current='',isDeleting=false;
+function type(){
+  const el=document.getElementById('typing');
+  if(i<roles.length){
+    if(!isDeleting && j<=roles[i].length){current=roles[i].substring(0,j++);} 
+    if(isDeleting && j>=0){current=roles[i].substring(0,j--);} 
+    el.textContent=current;
+    if(j==roles[i].length){isDeleting=true;setTimeout(type,1200);return;}
+    if(j==0 && isDeleting){isDeleting=false;i=(i+1)%roles.length;}
+  }
+  setTimeout(type,isDeleting?40:80);
+}
+type();
+
+// skill animation
+const bars=document.querySelectorAll('.bar');
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.style.width=e.target.dataset.width;
+      e.target.style.transition='width 2s ease';
+    }
+  });
+},{threshold:0.5});
+bars.forEach(bar=>{bar.style.width='0';obs.observe(bar);});
+</script>
+
+</body>
+</html>
